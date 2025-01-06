@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  gemini-search-web:
+    build: .
+    ports:
+      - "13010:3000"
+    environment:
+      - NODE_ENV=production
+    restart: always
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
