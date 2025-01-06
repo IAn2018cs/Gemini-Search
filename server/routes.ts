@@ -189,7 +189,7 @@ export function registerRoutes(app: Express): Server {
         sources,
       });
     } catch (error: any) {
-      console.error("Search error:", error);
+      console.error("Search error:", error.message);
       res.status(500).json({
         message:
           error.message || "An error occurred while processing your search",
